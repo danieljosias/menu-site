@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--criar um h1/criar 4 botoes/colocar os eventos/criar uma div/um id/  -->
+
+    <h1>Calculadora</h1>
+    <button onclick="soma();">+</button>
+    <button onclick="subtracao();">-</button>
+    <button onclick="multiplicacao();">*</button>
+    <button onclick="divisao();">/</button>
+    <div id="dv1"></div>
+
+<body>
+<script>    
+    //caculadora
+
+    //pedir um numero
+    var n1 = prompt("Digite um número:")
+    n1 = parseFloat(n1) //converter string p/ number
+    escreve();
+
+    //criar function escreve
+    function escreve(){
+        var dv1 = document.querySelector("#dv1");
+        dv1.innerHTML = n1;
+    }
+
+    //function soma
+    function soma(){
+        var n = prompt("digite outro número:")
+        n = parseFloat(n)
+        n1 = (n1+n);
+        escreve();
+    }
+   
+
+    //function subtracao
+    function subtracao(){
+        var n = prompt("digite outro número:")
+        n = parseFloat(n)
+        n1 = n1-n;
+        escreve();
+    }
+    
+
+    //function multiplicacao
+    function multiplicacao(){
+        var n = prompt("digite outro número:")
+        n = parseFloat(n)
+        n1 = n1*n;
+        escreve();
+    }
+   
+
+    //funciton divisao
+    function divisao(){
+        var n = prompt("digite outro número:")
+        n = parseFloat(n)
+        n1 = n1/n;
+        escreve();
+    }
+    
+</script>    
+</body>
+</html>
