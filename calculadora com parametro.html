@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            background-color: aqua;
+            border: 2px solid #000;
+            width: 50px;
+            height: 30px;
+            font-weight: 500;
+            margin: 10px;
+        }
+
+        .dv{
+            border: 5px groove aqua;
+            height: 100px;
+            width: 150px;
+        }
+
+
+    </style>
+</head>
+
+<!--criar um h1/criar 4 botoes/colocar os eventos/criar uma div/um id/  -->
+
+    <h1>Calculadora</h1>
+    <div class="dv">
+    <button onclick="calcular('+')" style="font-size:15pt">+</button>
+    <button onclick="calcular('-')" style="font-size:15pt">-</button>
+    <button onclick="calcular('*')" style="font-size:15pt">*</button>
+    <button onclick="calcular('/')" style="font-size:15pt">/</button>
+    </div>
+    <div id="dv1"></div>
+
+<body>
+<script>    
+    //caculadora com parametro
+
+    //pedir um numero
+   var n1 = prompt("Digite um número:")
+    n1 = parseFloat(n1) //converter string p/ number
+    escreve();
+
+    //criar function escreve
+    function escreve(){
+        var dv1 = document.querySelector('#dv1');
+        dv1.innerHTML = n1;
+    }
+
+    //function calcular
+    function calcular(simbolo){
+        var n = prompt("digite outro número:")
+        n = parseFloat(n)
+    
+        switch(simbolo){
+            case '+':
+            n1 += n;
+            break;
+
+            case '-':
+                n1 -= n;
+                break;
+
+            case '*':
+                n1 *= n;
+                break;
+
+            case '/':
+                n1 /= n;  
+        }
+        escreve(); 
+    }
+   
+</script>    
+</body>
+</html>
